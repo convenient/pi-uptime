@@ -1,0 +1,12 @@
+php:
+- '7.4'
+
+notifications:
+  email:
+    recipients:
+      - lukerodgers90+travis@gmail.com
+    on_success: change
+    on_failure: always
+
+script:
+  - php pong.php

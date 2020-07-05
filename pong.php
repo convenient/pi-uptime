@@ -3,7 +3,7 @@ set_error_handler(function ($severity, $message, $file, $line) {
     throw new \ErrorException($message, $severity, $severity, $file, $line);
 });
 
-$data = \json_decode(file_get_contents(__DIR__ . '/data.json'), JSON_THROW_ON_ERROR);
+$data = json_decode(file_get_contents(__DIR__ . '/data.json'));
 
 $lastPush = $data['timestamp'];
 

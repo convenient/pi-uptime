@@ -8,5 +8,10 @@ notifications:
     on_success: change
     on_failure: always
 
-script:
-  - php pong.php
+jobs:
+  include:
+    - stage: "Uptime monitoring"
+      script:
+        - php pong.php
+      if: type IN (cron)
+

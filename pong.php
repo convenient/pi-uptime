@@ -7,7 +7,7 @@ $data = json_decode(file_get_contents(__DIR__ . '/data.json'), true);
 
 $lastPush = $data['timestamp'];
 
-$sixHoursAgo = strtotime('-6 hours');
+$sixHoursAgo = strtotime('-1 hours');
 if ($lastPush <= $sixHoursAgo) {
     echo "failure" . PHP_EOL;
     exit(1);

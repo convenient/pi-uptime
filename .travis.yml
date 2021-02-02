@@ -12,6 +12,7 @@ jobs:
   include:
     - stage: "Uptime monitoring"
       script:
+        - echo 'date.timezone = "Europe/London"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
         - php --version
         - php pong.php
       if: type IN (cron)

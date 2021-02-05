@@ -11,7 +11,7 @@ err_report() {
 trap 'err_report $LINENO' ERR
 
 cd $DIR_BASE
-
+git pull # keep up with changes in .travis.yml etc
 git checkout data.json
 git reset --hard origin/master
 php ping.php
